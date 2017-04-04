@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exams</title>
+</head>
+<body>
+
+{% block content %}
+    <h1>Exam List</h1>
+
+    {% if exam_list %}
+    <ul>
+
+      {% for exam in exam_list %}
+      <li>
+        <a href="{{ exam.get_absolute_url }}">{{ exam.title }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no exams in the database.</p>
+    {% endif %}
+{% endblock %}
+
+</body>
+</html>
