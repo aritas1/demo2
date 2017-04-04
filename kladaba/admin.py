@@ -1,5 +1,6 @@
 from django.contrib import admin
-from kladaba.models import Exam, Lecture
+from kladaba.models import Exam, Lecture, Semester
+
 
 # Register your models here.
 class ExamAdmin(admin.ModelAdmin):
@@ -16,3 +17,4 @@ class LectureAdmin(admin.ModelAdmin):
     ordering = ('-id',)
 
 admin.site.register(Lecture, LectureAdmin)
+admin.site.register(Semester)
